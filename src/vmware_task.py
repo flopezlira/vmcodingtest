@@ -98,7 +98,7 @@ class WindowsImplementation(Implementation):
         return True
 
     def ping_url(self, ip: Union[IPv4Address, IPv6Address]) -> bool:
-        command = ["ping", "-n", "1", ip]
+        command = ["ping", "-n", "1", str(ip)]
         return subprocess.call(command) == 0
 
     def request_and_get(self, ip: Union[IPv4Address, IPv6Address]) -> bool:

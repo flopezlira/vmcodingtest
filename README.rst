@@ -32,10 +32,16 @@ Install for the current user:
     $ python3 -e venv venv
     $ source venv/bin/activate
     # For windows
-    c:\>py -e venv venv
-    c:\>py -m venv c
+    c:\>py -e venv venvwin
+    c:\>py -m venv venvwin\Scripts\activate
     # Install requirements
     pip install -r requirements.txt
+    # install requests
+    # For Linux and Mac
+    sudo apt-get install python3-requests
+    # For windows
+    pip install requests
+
 
 
 Run the application:
@@ -45,7 +51,7 @@ Run the application:
     # For Linux and Mac at vmware directory
     $ python3 src/main.py <args>
     # For Windows
-    c:\>
+    c:\> py
 
 Run the test suite:
 
