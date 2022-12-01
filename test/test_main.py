@@ -13,7 +13,7 @@ from src.main import main  # test __all__
 @pytest.fixture()
 def data_for_ok_test():
     if platform.system().lower() == 'windows':
-        return '-p /c/Users/fjllirahinojo/Documents/repos/vmtest/vmcodingtest -i 187.188.112.16 -f test.bat'
+        return '-p c:/Users/fjllirahinojo/Documents/repos/vmtest/vmcodingtest -i 187.188.112.16 -f test.bat'
     else:
         return '-p /home/flopezlira -i 187.188.112.16 -f test.sh'
 
@@ -21,7 +21,7 @@ def data_for_ok_test():
 @pytest.fixture()
 def data_for_not_ok_test():
     if platform.system().lower() == 'windows':
-        return '-p /c/Users/notauser/Documents/repos/vmtest/vmcodingtest -i 125.88.88.99 -f test2.bat'
+        return '-p c:/Users/notauser/Documents/repos/vmtest/vmcodingtest -i 125.88.88.99 -f test2.bat'
     else:
         return '-p /home2/flopezlira -i 125.88.88.99 -f test2.bat'
 
