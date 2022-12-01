@@ -84,7 +84,8 @@ class WindowsImplementation(Implementation):
 
     def create_text_file(self, path) -> bool:
         if not self.validate_path(path):
-            raise OSError("File path does not exist or no permissions to write")
+            logger.error("File path does not exist or no permissions to write")
+            return False
         file_name = pathlib.Path(os.path.dirname(path), "Hello.txt")
         try:
             with open(file_name, "w") as f:
