@@ -123,7 +123,7 @@ class WindowsImplementation(Implementation):
         logger.info(f"Executing {file_name} at {cwd}")
         if os.path.isfile(file_name):
             try:
-                p = subprocess.Popen(file_name, cwd)
+                p = subprocess.Popen([file_name, cwd])
                 stdout, stderror = p.communicate()
                 return True
             except subprocess.CalledProcessError as e:
